@@ -43,5 +43,16 @@ def sort_students_by_course():
     for student_id, info in sorted_students.items():
         print(f"ID: {student_id}, ПІБ: {info['ПІБ']}, Курс: {info['Курс']}")
 
+# Светюха Катерина
+# Функція сортування студентів за курсом
+
+def sort_students_by_course():
+    """Сортує студентів за курсом і виводить відсортований список"""
+    sorted_students = dict(sorted(students.items(), key=lambda x: x[1]["Курс"]))
+    for student_id, info in sorted_students.items():
+        print(f"ID: {student_id}, ПІБ: {info['ПІБ']}, Курс: {info['Курс']}")
+
 # Викликаємо функцію для сортування
 sort_students_by_course()
+
+
