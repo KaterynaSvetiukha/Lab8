@@ -55,4 +55,17 @@ def sort_students_by_course():
 # Викликаємо функцію для сортування
 sort_students_by_course()
 
+# Дворнік Олександр
+# Функція для оновлення оцінок студента
+
+def update_grades(student_id, subject, new_grade):
+    """Оновлює оцінку за предметом для конкретного студента"""
+    if student_id in students:
+        students[student_id]["Предмети"][subject] = new_grade
+        print(f"Оцінка з предмету {subject} для студента {students[student_id]['ПІБ']} оновлена до {new_grade}.")
+    else:
+        print("Студента з таким ID не знайдено.")
+
+# Приклад оновлення оцінки
+update_grades(103, "Математика", 95)
 
