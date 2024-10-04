@@ -81,4 +81,16 @@ def delete_student(student_id):
 
 # Приклад видалення студента
 delete_student(102)
+# Литвиненко
+# Функція для підрахунку середнього балу за предметом для кожного студента
+
+def calculate_average_grades():
+    """Розраховує середній бал для кожного студента за всіма предметами"""
+    for student_id, info in students.items():
+        subjects = info["Предмети"]
+        average_grade = sum(subjects.values()) / len(subjects)
+        print(f"Середній бал студента {info['ПІБ']} становить {average_grade:.2f}")
+
+# Викликаємо функцію для підрахунку середнього балу
+calculate_average_grades()
 
