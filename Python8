@@ -68,4 +68,17 @@ def update_grades(student_id, subject, new_grade):
 
 # Приклад оновлення оцінки
 update_grades(103, "Математика", 95)
+# Спориш Владислав
+# Функція для видалення студента зі словника
+
+def delete_student(student_id):
+    """Видаляє студента за його ID"""
+    if student_id in students:
+        deleted_student = students.pop(student_id)
+        print(f"Студент {deleted_student['ПІБ']} видалений.")
+    else:
+        print("Студента з таким ID не знайдено.")
+
+# Приклад видалення студента
+delete_student(102)
 
